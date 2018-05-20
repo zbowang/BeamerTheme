@@ -1,0 +1,65 @@
+% This file contains some settings , it need to be input by your tex file.
+
+\usepackage[english]{babel}
+% add sidebar on the right
+\useoutertheme[width=3\baselineskip,right]{sidebar}
+% TOC(table of content) using ordered list 
+\setbeamertemplate{section in toc}[sections numbered]
+% unordered list using solid point
+\setbeamertemplate{itemize item}{$\bullet$}
+% set frame title for each page
+\setbeamertemplate{frametitle}
+  {\vspace{-0.5cm}
+   \insertframetitle
+   \vspace{-0.5cm}}
+% delete original navigation
+\setbeamertemplate{navigation symbols}{}
+% set footline
+\makeatother
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor
+  \end{beamercolorbox}
+
+  \begin{beamercolorbox}[wd=.6\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle\hspace*{13em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{0ex}
+  \end{beamercolorbox}}
+
+  \vskip0pt%
+}
+\makeatletter
+
+
+% define color
+%\definecolor{alizarin}{rgb}{0.82, 0.1, 0.26} % a kind of red
+%\definecolor{DarkFern}{HTML}{407428} % a kind of green
+%\colorlet{main}{DarkFern!100!white} % first setting way(with color newly defined)
+%\colorlet{main}{red!70!black} % second setting way(with internal color by setting gradient)
+\definecolor{bistre}{rgb}{0.24, 0.17, 0.12} % a kind of black
+\definecolor{mygrey}{rgb}{0.52, 0.52, 0.51} % a kind of grey
+\colorlet{text}{bistre!100!white} % from now on, `text` implies the color defined
+
+% set colors to elements, fg is the color itself, bg is the background color, !num! implies gradient
+\setbeamercolor{title}{fg=main}
+\setbeamercolor{frametitle}{fg=main}
+\setbeamercolor{section in toc}{fg=text}
+\setbeamercolor{normal text}{fg=text}
+\setbeamercolor{block title}{fg=main,bg=mygrey!14!white}
+\setbeamercolor{block body}{fg=black,bg=mygrey!10!white}
+\setbeamercolor{qed symbol}{fg=main} % frame after proof
+\setbeamercolor{math text}{fg=black}
+% footline color
+\setbeamercolor{author in head/foot}{fg=black, bg=mygrey!5!white}
+\setbeamercolor{title in head/foot}{fg=black, bg=mygrey!5!white}
+\setbeamercolor{structure}{fg=main, bg=mygrey!10!white} % 设置sidebar颜色
+
+% margin left and right, and fontsize of sidebar
+\def\swidth{2.3cm}
+\setbeamersize{sidebar width right=\swidth}
+\setbeamersize{sidebar width left=\swidth}
+\setbeamerfont{title in sidebar}{size=\scriptsize}
+\setbeamerfont{section in sidebar}{size=\tiny}
