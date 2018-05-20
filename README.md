@@ -36,18 +36,18 @@ Of course, you cna modify the theme based on the two template files to extend ne
 
 ## Demos
 
-long green version
+### long green version
 
 ![](imgs/long_green.jpg)
 
-long red version
+### long red version
 
 ![](imgs/long_red.jpg)
 
-short green version
+### short green version
 
 ![](imgs/short_green.jpg)
 
-short red version
+### short red version
 
 ![](imgs/short_red.jpg)
