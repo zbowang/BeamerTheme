@@ -32,7 +32,9 @@ For example
 
 (Hint: Make sure that template_long.tex and your tex file is in the same folder.)
 
-Of course, you cna modify the theme based on the two template files to extend new styles. For each element you want to modify, just google it! There are a lot of answers to help you.
+Of course, you can modify the theme based on the two template files to extend new styles. For each element you want to modify, just google it! There are a lot of answers to help you.
+
+Next, let's see some demos.
 
 ## Demos
 
