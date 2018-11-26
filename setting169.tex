@@ -1,0 +1,87 @@
+% footline
+% delete navigation below
+\setbeamertemplate{navigation symbols}{}
+% define footline
+\makeatother
+\setbeamertemplate{footline}
+{
+    \leavevmode%
+    \hbox{%
+    \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor
+    \end{beamercolorbox}
+    
+    \begin{beamercolorbox}[wd=.6\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle\hspace*{13em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{0ex}
+    \end{beamercolorbox}}
+    
+    \vskip0pt%
+}
+\makeatletter
+% footline color
+\setbeamercolor{author in head/foot}{fg=black, bg=mygrey!5!white}
+\setbeamercolor{title in head/foot}{fg=black, bg=mygrey!5!white}
+% sidebar color
+\setbeamercolor{structure}{fg=main, bg=mygrey!10!white}
+
+
+% sidebar
+% on the right
+\useoutertheme[width=5\baselineskip,right]{sidebar}
+% delete title and author
+\makeatletter
+\setbeamertemplate{sidebar right}{\insertverticalnavigation{\beamer@sidebarwidth}}
+\makeatother
+% fontsize
+\setbeamerfont{section in sidebar}{size=\scriptsize}
+\setbeamerfont{subsection in sidebar}{size=\scriptsize}
+% margin
+\setbeamersize{sidebar width right=3cm}
+\setbeamersize{sidebar width left=2cm}
+
+
+% item settings
+\setbeamertemplate{itemize item}{$\color{main}\bullet$}
+\setbeamertemplate{enumerate items}[square]
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[square]
+
+
+% color definition
+%\definecolor{alizarin}{rgb}{0.82, 0.1, 0.26} % red
+\definecolor{myblack}{rgb}{0.24, 0.17, 0.12}
+\definecolor{mygrey}{rgb}{0.52, 0.52, 0.51}
+
+\definecolor{berlin}{rgb}{0.64, 0, 0} % red
+\colorlet{main}{berlin}
+\colorlet{text}{myblack!100!white}
+%% main candidates
+%% 1
+% \definecolor{DarkFern}{HTML}{407428} % green
+% \colorlet{main}{DarkFern!100!white}
+%% 2
+% \definecolor{bluegreen}{rgb}{0.047 0.282 0.259} % green
+% \colorlet{main}{bluegreen}
+%% 3
+% \definecolor{mybrown}{HTML}{967249} % brown
+% \colorlet{main}{mybrown}
+
+% set colors to elements
+%% fg:    itself
+%% bg:    background
+%% !num!: gradient
+\setbeamercolor{title}{fg=main}
+\setbeamercolor{frametitle}{fg=main, bg=white}
+\setbeamercolor{section in toc}{fg=text} 
+\setbeamercolor{normal text}{fg=text}
+\setbeamercolor{block title}{fg=main,bg=mygrey!14!white}
+\setbeamercolor{block body}{fg=black,bg=mygrey!10!white}
+\setbeamercolor{block body alerted}{bg=white}
+\setbeamercolor{block title alerted}{fg=main,bg=white}
+\setbeamercolor{alerted text}{fg=main}
+\setbeamercolor{qed symbol}{fg=main} % proof end square
+\setbeamercolor{math text}{fg=black}
+\hypersetup{colorlinks,linkcolor=,urlcolor=main!80!white}
+
+
