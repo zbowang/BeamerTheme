@@ -28,10 +28,9 @@ The main file is `beamerthemeSimple.sty`. Make sure it is in the same folder as 
 ```latex
 \documentclass{beamer}
     \usepackage[english]{babel}
-    \usetheme{Simple}
     
     % customize your own color and navigation
-    \definecolor{main}{RGB}{12 72 66} % overall color
+    \usetheme[RGB={12 72 66}]{Simple} % color
     \useoutertheme{tree}              % navigation
     
     \author{Your Name}
@@ -57,29 +56,31 @@ You can change the color and the way of navigation as you like. I will talk abou
 There will be only one unified color in the slides with this theme. You can change the overall color by setting RGB.
 
 ```
-\definecolor{main}{RGB}{163 0 0} % red
+\usetheme[RGB={12 72 66}]{Simple}
 ```
 
 Or HEX
 
 ```
-\definecolor{main}{HTML}{A30000}
+\usetheme[HTML=A30000]{Simple}
 ```
 
 Here are some colors I like. You can see the output in [examples](examples).
 
 ```
-\definecolor{main}{HTML}{096148} % green
-\definecolor{main}{RGB}{12 72 66} % bluegreen
-\definecolor{main}{HTML}{8D742A} % brown
-\definecolor{main}{RGB}{163 0 0} % red
+HTML=096148      % green
+RGB={12 72 66}   % bluegreen
+HTML=8D742A      % brown
+RGB={163 0 0}    % red
 ```
-You can search for beautiful colors [here](http://nipponcolors.com).
+You can search for beautiful colors [here](http://nipponcolors.com). 
+
+Or just generate three RGB values by heart. You may find the output is surprisingly beautiful when the three value are all below 100.
 
 
 ## Navigation
 
-For a long-time presentation, a suitable navigation is necessary. I selected four ways of navigation with different advantages.
+For a long-time presentation, a suitable navigation is necessary. I selected four ways of navigation with different advantages.(**focus on the top of each slide**)
 
 ### 1. split
 
@@ -139,9 +140,7 @@ Here is the usage of this theme which is kind of different from before.
 ```
 \documentclass[aspectratio=169]{beamer}
     \usepackage[english]{babel}
-    \usetheme{Bar169}
-
-    \definecolor{main}{RGB}{163 0 0} % red
+    \usetheme[RGB={12 72 66}]{Bar169}
 
     \author{Your Name}
     \title{Your Title}
@@ -219,6 +218,6 @@ However, you can achieve most of this effect by changing my 'simple' theme.
 
 ------------------
 
-Besides, it is more flexible to add the navigation.
+**Besides, it is more flexible to add the navigation.**
 
 ![simple-tree-metropolis](imgs/simple_tree_metropolis.jpg)

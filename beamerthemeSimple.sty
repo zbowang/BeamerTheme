@@ -4,6 +4,16 @@
 % under the LaTeX Project Public License
 
 
+\definecolor{beamer@simple@color}{RGB}{12 72 66} % bluegreen
+\DeclareOptionBeamer{gray}{\definecolor{beamer@simple@color}{gray}{#1}}
+\DeclareOptionBeamer{rgb}{\definecolor{beamer@simple@color}{rgb}{#1}}
+\DeclareOptionBeamer{RGB}[{12 72 0}]{\definecolor{beamer@simple@color}{RGB}{#1}}
+\DeclareOptionBeamer{HTML}{\definecolor{beamer@simple@color}{HTML}{#1}}
+\DeclareOptionBeamer{cmyk}{\definecolor{beamer@simple@color}{cmyk}{#1}}
+\DeclareOptionBeamer{cmy}{\definecolor{beamer@simple@color}{cmy}{#1}}
+\DeclareOptionBeamer{named}{\definecolor{beamer@simple@color}{named}{#1}}
+\DeclareOptionBeamer{hsb}{\definecolor{beamer@simple@color}{hsb}{#1}}
+\ProcessOptionsBeamer
 
 % footline
 % delete navigation below
@@ -31,37 +41,37 @@
 \setbeamercolor{title in head/foot}{fg=black, bg=mygrey!5!white}
 
 % item settings
-\setbeamertemplate{itemize item}{$\color{main}\bullet$}
-\setbeamertemplate{itemize subitem}{$\color{main}\bullet$}
+\setbeamertemplate{itemize item}{$\color{beamer@simple@color}\bullet$}
+\setbeamertemplate{itemize subitem}{$\color{beamer@simple@color}\bullet$}
 \setbeamertemplate{enumerate items}[square]
 \setbeamertemplate{section in toc}[sections numbered]
 \setbeamertemplate{subsection in toc}[square]
 
 
+
 % color definition
 \definecolor{mygrey}{rgb}{0.52, 0.52, 0.51}
-\definecolor{main}{RGB}{12 72 66} % bluegreen
 
-\setbeamercolor{structure}{fg=main, bg=mygrey!10!white}
-\setbeamercolor{frametitle}{fg=main, bg=white}
+\setbeamercolor{structure}{fg=beamer@simple@color, bg=mygrey!10!white}
+\setbeamercolor{frametitle}{fg=beamer@simple@color, bg=white}
 \setbeamercolor{block title}{bg=mygrey!14!white}
 \setbeamercolor{block body}{fg=black,bg=mygrey!10!white}
 \setbeamercolor{block body alerted}{bg=white}
-\setbeamercolor{block title alerted}{fg=main,bg=white}
-\setbeamercolor{alerted text}{fg=main}
+\setbeamercolor{block title alerted}{fg=beamer@simple@color,bg=white}
+\setbeamercolor{alerted text}{fg=beamer@simple@color}
 \setbeamerfont{block title alerted}{series=\mdseries}
 \setbeamerfont{alerted text}{series=\bfseries}
-\hypersetup{colorlinks,linkcolor=,urlcolor=main!80!white}
+\hypersetup{colorlinks,linkcolor=,urlcolor=beamer@simple@color!80!white}
 % \setbeamerfont{frametitle}{series=\bfseries}
 % \setbeamerfont{block title}{series=\bfseries}
 % \setbeamerfont{title}{series=\bfseries}
 % \setbeamertemplate{frametitle}{\insertframetitle\par\vskip-8pt\hrulefill} % add line under frametitle
 
 % % metropolis
-% % \definecolor{main}{RGB}{35 54 58}
+% % \definecolor{beamer@simple@color}{RGB}{35 54 58}
 % % no outer theme
 % \setbeamerfont{frametitle}{series=\bfseries}
-% \setbeamercolor{frametitle}{fg=white, bg=main}
+% \setbeamercolor{frametitle}{fg=white, bg=beamer@simple@color}
 % \setbeamerfont{block title}{series=\bfseries}
 % \setbeamerfont{block title alerted}{series=\bfseries}
 % \definecolor{alertcol}{RGB}{232 133 52}
