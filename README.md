@@ -6,7 +6,7 @@ Beamer has a lot of themes which are build-in([Beamer Matrix](https://hartwork.o
 
 The value of this project is as follows
 
-- a template easy to be applied, easy to change color, easy to change way of navigation
+- a template easy to be applied, easy to change the color, easy to change the way of navigation
 - a content tex file to test the beauty of other themes
 
 ## Demos
@@ -51,8 +51,6 @@ The main file is `beamerthemeSimple.sty`. Make sure it is in the same folder as 
 ```
 
 You can change the color and the way of navigation as you like. I will talk about the two topics in detail.
-
-You can find the source code of the demos in `simple.tex` and `bar169.tex` which just split the slides into several parts.
 
 ## Color
 
@@ -136,7 +134,7 @@ It will display all sections and subsections on the right bar. It contains most 
 
 Comparing with the previous outerthemes, I modified more after loading the built-in `sidebar` outertheme which I am not quite satisfied with. However, it may bring some side effect such as complict with Chinese and some settings of layout. But we can play with it well in most cases.
 
-Here are the setting of this theme which is kind of different from before.
+Here is the usage of this theme which is kind of different from before.
 
 ```
 \documentclass[aspectratio=169]{beamer}
@@ -162,7 +160,7 @@ Here are the setting of this theme which is kind of different from before.
     \end{document}
 ```
 
-Several points to pay attention to.
+Several points to pay attention to
 
 - Specify the ratio at the beginning `aspectratio=169`.
 - Use theme `Bar169` rather than `Simple`.
@@ -172,7 +170,7 @@ Other things are the same. You can change the color in the same way.
 
 ## Test other themes
 
-The `content.tex` contents many patterns in beamer and enough sections to test what a theme looks like. 
+The `content.tex` contents many elements and enough sections to test what a theme looks like. 
 
 ### Built-in themes
 
@@ -215,10 +213,12 @@ You will get
 
 I have to say that it is quite beautiful! But without navigation, it may be more appropriate to be used when having a short presentation.
 
-However, you can achieve most of this effect by changing the 'simple' theme.
+However, you can achieve most of this effect by changing my 'simple' theme.
 
 ![simple-metropolis](imgs/simple_metropolis.jpg)
 
-Besides, you can be more flexible to add the navigation.
+------------------
+
+Besides, it is more flexible to add the navigation.
 
 ![simple-tree-metropolis](imgs/simple_tree_metropolis.jpg)
