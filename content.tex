@@ -64,7 +64,6 @@
         \end{align*}
         % \vspace*{-\baselineskip}\setlength\belowdisplayshortskip{0pt}
     \end{proof}
-    
 \end{frame}
 
 \subsection{Other Environments}
@@ -114,7 +113,6 @@
 \end{frame}
 
 \begin{frame}{More}
-
     More environments such as
 
     \begin{itemize}
@@ -123,7 +121,6 @@
         \item corollary
         \item example
     \end{itemize}
-    
 \end{frame}
 
 \section{Beamer More}
@@ -149,7 +146,6 @@
             \end{itemize}
         \end{enumerate}
     \end{minipage}
-    
 \end{frame}
 
 \begin{frame}{Columns}
@@ -175,7 +171,6 @@
 
 \subsection{Table}
 
-
 \begin{frame}{Create Tables}
     \begin{center}
         \begin{table}[!t]  
@@ -192,6 +187,44 @@
             \end{tabular}
         \end{table}
     \end{center}
+\end{frame}
+
+\subsection{Math}
+
+\begin{frame}{Equation1}
+    A matrix in text must be set  smaller:
+    $\bigl(\begin{smallmatrix}
+    a&b \\ c&d
+    \end{smallmatrix} \bigr)$
+    to not increase leading in a portion of text.
+
+    \[ f(n) =
+    \begin{cases}
+        n/2       & \quad \text{if } n \text{ is even}\\
+        -(n+1)/2  & \quad \text{if } n \text{ is odd}
+    \end{cases}
+    \]
+
+    $$50 apples \times 100 apples = lots of apples^2$$
+\end{frame}
+
+\begin{frame}{Equation2}
+    $$\sum_{\substack{0<i<m \\ 0<j<n }} 
+      P(i,j)=\int\limits_a^b\prod P(i,j)$$
+
+    $$P\left(A=2\middle|\frac{A^2}{B}>4\right)$$
+
+    $$( a ), [ b ], \{ c \}, | d |, \| e \|,
+    \langle f \rangle, \lfloor g \rfloor,
+    \lceil h \rceil, \ulcorner i \urcorner$$
+\end{frame}
+
+\begin{frame}{Equation3}
+    $$Q(\alpha)=\alpha_i\alpha_jy_iy_j(x_i\cdot x_j)$$
+
+    $$Q(\alpha)=\alpha^i\alpha^jy^{(i)}y^{(j)}(x^i\cdot x^j)$$
+    
+    $$\Gamma=\beta+\alpha+\gamma+\rho$$
 \end{frame}
 
 
