@@ -1,0 +1,69 @@
+% Copyright 2018 by Zhibo Wang
+%
+% This file may be distributed and/or modified
+% under the LaTeX Project Public License
+
+
+% sidebar
+% on the right
+\useoutertheme[width=5\baselineskip,right]{sidebar}
+% delete title and author
+\makeatletter
+\setbeamertemplate{sidebar right}{\insertverticalnavigation{\beamer@sidebarwidth}}
+\makeatother
+% fontsize
+\setbeamerfont{section in sidebar}{size=\scriptsize}
+\setbeamerfont{subsection in sidebar}{size=\scriptsize}
+% margin
+\setbeamersize{sidebar width right=3cm}
+\setbeamersize{sidebar width left=2cm}
+
+
+
+% footline
+% delete navigation below
+\setbeamertemplate{navigation symbols}{}
+% define footline
+% \makeatother
+\setbeamertemplate{footline}
+{
+    \leavevmode%
+    \hbox{%
+    \begin{beamercolorbox}[wd=.4\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor
+    \end{beamercolorbox}
+    
+    \begin{beamercolorbox}[wd=.6\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+    \usebeamerfont{title in head/foot}\insertshorttitle\hspace*{13em}
+    \insertframenumber{} / \inserttotalframenumber\hspace*{0ex}
+    \end{beamercolorbox}}
+    
+    \vskip0pt%
+}
+% \makeatletter
+% footline color
+\setbeamercolor{author in head/foot}{fg=black, bg=mygrey!5!white}
+\setbeamercolor{title in head/foot}{fg=black, bg=mygrey!5!white}
+
+% item settings
+\setbeamertemplate{itemize item}{$\color{main}\bullet$}
+\setbeamertemplate{itemize subitem}{$\color{main}\bullet$}
+\setbeamertemplate{enumerate items}[square]
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[square]
+
+
+% color definition
+\definecolor{mygrey}{rgb}{0.52, 0.52, 0.51}
+\definecolor{main}{RGB}{163 0 0} % red
+
+\setbeamercolor{structure}{fg=main, bg=mygrey!10!white}
+\setbeamercolor{frametitle}{fg=main, bg=white}
+\setbeamercolor{block title}{bg=mygrey!14!white}
+\setbeamercolor{block body}{fg=black,bg=mygrey!10!white}
+\setbeamercolor{block body alerted}{bg=white}
+\setbeamercolor{block title alerted}{fg=main,bg=white}
+\setbeamerfont{block title alerted}{series=\mdseries}
+\setbeamercolor{alerted text}{fg=main}
+\setbeamerfont{alerted text}{series=\bfseries}
+\hypersetup{colorlinks,linkcolor=,urlcolor=main!80!white}
