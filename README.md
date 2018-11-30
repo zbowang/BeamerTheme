@@ -9,6 +9,8 @@ The value of this project is as follows
 - a template easy to be applied, easy to change the color, easy to change the way of navigation
 - a content tex file to test the beauty of other themes
 
+The code has passed with pdflatex and Xelatex.
+
 ## Demos
 
 Here, I will show two main kinds of output with different aspect ratio(ratio of width to height). You can change the theme color and the way of navigation conveniently. See more [examples](examples) here.
@@ -126,14 +128,11 @@ However, the dots placed in two lines may confuse those who have never touched i
 
 ![miniframes1](imgs/miniframes2.PNG)
 
-
 ### 4. sidebar
 
 It will display all sections and subsections on the right bar. It contains most information comparing with ways before. But it is not proper if there are too many topics to display.
 
 ![sidebar](imgs/sidebar.PNG)
-
-Comparing with the previous outerthemes, I modified more after loading the built-in `sidebar` outertheme which I am not quite satisfied with. However, it may bring some side effect such as complict with Chinese and some settings of layout. But we can play with it well in most cases.
 
 Here is the usage of this theme which is kind of different from before.
 
