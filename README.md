@@ -2,12 +2,11 @@
 
 ## Introduction
 
-Beamer has a lot of themes which are build-in([Beamer Matrix](https://hartwork.org/beamer-theme-matrix/)) or developed by others([overleaf](https://www.overleaf.com/gallery/tagged/presentation), [github](https://github.com/martinbjeldbak/ultimate-beamer-theme-list)). But there is almost no satisfaction for me. What I mainly focus on is just **simple colors** and **clear navigation**. So I made a simple theme for myself by modifying the defaut theme. I will be encouraged if you like it too.
-
 The value of this project is as follows
 
-- a template easy to be applied, easy to change the color, easy to change the way of navigation
-- a content tex file to test the beauty of other themes
+- A beamer theme focusing on simple color and clear navigation. 
+- The color and navigation can be changed easily. And I will talk about the tricks to set them up.
+- A content tex file to test the beauty of other themes.
 
 The code has passed with pdflatex and Xelatex.
 
@@ -25,7 +24,13 @@ Here, I will show two main kinds of output with different aspect ratio(ratio of 
 
 ## Usage
 
-The main file is `beamerthemeSimple.sty`. Make sure it is in the same folder as your tex file(Or [global path](https://tex.stackexchange.com/questions/1137/where-do-i-place-my-own-sty-or-cls-files-to-make-them-available-to-all-my-te/214080)). Here is a simplfied tex file.
+The main file is `beamerthemeSimple.sty`. Make sure it is in the same folder as your tex file(Or [global path](https://tex.stackexchange.com/questions/1137/where-do-i-place-my-own-sty-or-cls-files-to-make-them-available-to-all-my-te/214080)). You can use it just like other themes.
+
+```latex
+\usetheme{Simple}
+```
+
+Here is a complete example to use it.
 
 ```latex
 \documentclass{beamer}
@@ -57,17 +62,17 @@ You can change the color and the way of navigation as you like. I will talk abou
 
 There will be only one unified color in the slides with this theme. You can change the overall color by setting RGB.
 
-```
+```latex
 \usetheme[RGB={12 72 66}]{Simple}
 ```
 
 Or HEX
 
-```
+```latex
 \usetheme[HTML=A30000]{Simple}
 ```
 
-Here are some colors I like. You can see the output in [examples](examples).
+Here are some colors that I like. You can see the output in [examples](examples).
 
 ```
 HTML=096148      % green
@@ -77,12 +82,11 @@ RGB={163 0 0}    % red
 ```
 You can search for beautiful colors [here](http://nipponcolors.com). 
 
-Or just generate three RGB values by heart. You may find the output is surprisingly beautiful when the three value are all below 100.
-
+Or just generate three RGB values randomly by heart. You may find the output is surprisingly beautiful if the three value are all below 100.
 
 ## Navigation
 
-For a long-time presentation, a suitable navigation is necessary. I selected four ways of navigation with different advantages.(**focus on the top of each slide**)
+For a long-time presentation, a suitable navigation is necessary. I selected four ways of navigation with different advantages.(**Focus on the top of each slide next.**)
 
 ### 1. split
 
@@ -110,7 +114,7 @@ Load this navigation by
 
 ### 3. miniframes
 
-This navigation displays all sections and the current subsection. More importantly, the navigation dots can show the progress of each subsection.
+This navigation displays all sections and the current subsection. More importantly, the navigation bullets can show the progress of each subsection.
 
 ![miniframes1](imgs/miniframes1.PNG)
 
@@ -120,17 +124,20 @@ Load this navigation by
 \useoutertheme{miniframes}
 ```
 
-However, the dots placed in two lines may confuse those who have never touched it. Therefore, I recommend to use it when there are no subsections so that the dots will be placed in one line. The navigation dots will work for section if you set as follows.
+However, the bullets placed in two lines may confuse those who have never used it. Therefore, I recommend to use this when there are no subsections so that the bullets will be placed in one line. Or you can set to make the navigation bullets only work for section.
 
 ```
+\documentclass[compress]{beamer}
 \useoutertheme[subsection=false]{miniframes}
 ```
 
 ![miniframes1](imgs/miniframes2.PNG)
 
+Another point to note is that the outertheme **miniframes and Xelatex are not compatible**. So you need to use pdflatex to achieve this effect.
+
 ### 4. sidebar
 
-It will display all sections and subsections on the right bar. It contains most information comparing with ways before. But it is not proper if there are too many topics to display.
+It will display all sections and subsections on the right bar and contains most information comparing with ways before. But it is not proper if there are too many topics to display.
 
 ![sidebar](imgs/sidebar.PNG)
 
